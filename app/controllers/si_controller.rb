@@ -11,7 +11,7 @@ class SiController < ApplicationController
   end
 
   def string_conversion(string)
-    new_string = string.split(%r{(\+|\(|\)|\-|\/|\*)})
+    new_string = string.split(%r{(\(|\)|\/|\*)})
     new_string.each do |str|
       case str
       when "minute"
