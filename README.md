@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Ruby web service for unit conversion to SI from widely used counterparts.
 
-Things you may want to cover:
+To test, use the address https://morning-dusk-32794.herokuapp.com/units/si and send a GET request with query parameter **units** and a string containing any number of SI units multiplied or divided. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Available input: minute, min, hour, h, day, d, degree, °, ‘, second, “, hectare, ha, litre, L, tonne and t.
