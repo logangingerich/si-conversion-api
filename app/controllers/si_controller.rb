@@ -58,39 +58,39 @@ class SiController < ApplicationController
     array.each do |item|
       case item
       when "minute"
-        item.gsub!("minute", "60")
+        item.gsub!("minute", "60.0")
       when "hour"
-        item.gsub!("hour", "3600")
+        item.gsub!("hour", "3600.0")
       when "degree"
-        item.gsub!("degree", "#{Math::PI / 180}")
+        item.gsub!("degree", "#{(Math::PI / 180).to_f}")
       when "min"
-        item.gsub!("min", "60")
+        item.gsub!("min", "60.0")
       when "h"
-        item.gsub!("h", "3600")
+        item.gsub!("h", "3600.0")
       when "d"
-        item.gsub!("d", "86400")
+        item.gsub!("d", "86400.0")
       when "day"
-        item.gsub!("day", "86400")
+        item.gsub!("day", "86400.0")
       when "°"
-        item.gsub!("°", "#{Math::PI / 180}")
+        item.gsub!("°", "#{(Math::PI / 180).to_f}")
       when "‘"
-        item.gsub!("‘", "#{Math::PI / 10800}")
+        item.gsub!("‘", "#{(Math::PI / 10800).to_f}")
       when "second"
-        item.gsub!("second", "#{Math::PI / 648000}")
+        item.gsub!("second", "#{(Math::PI / 648000).to_f}")
       when "“"
-        item.gsub!("“", "#{Math::PI / 648000}")
+        item.gsub!("“", "#{(Math::PI / 648000).to_f}")
       when "hectare"
-        item.gsub!("hectare", "10000")
+        item.gsub!("hectare", "10000.0")
       when "ha"
-        item.gsub!("ha", "10000")
+        item.gsub!("ha", "10000.0")
       when "litre"
         item.gsub!("litre", "0.001")
       when "L"
         item.gsub!("L", "0.001")
       when "tonne"
-        item.gsub!("tonne", "1000")
+        item.gsub!("tonne", "1000.0")
       when "t"
-        item.gsub!("t", "1000")
+        item.gsub!("t", "1000.0")
       end
     end
     return eval(array.join).to_f.round(14)
