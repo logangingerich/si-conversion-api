@@ -54,7 +54,7 @@ class SiController < ApplicationController
   end
 
   def calculate(input)
-    array = input.split(%r{(\+|\(|\)|\-|\/|\*)})
+    array = input.split(%r{(\(|\)|\/|\*)})
     array.each do |item|
       case item
       when "minute"
